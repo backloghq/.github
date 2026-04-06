@@ -10,10 +10,11 @@
 - **Doc-driven development** — attach specs to tasks, implement against them
 - **Zero dependencies** — pure TypeScript with event-sourced storage, works everywhere
 
-### Get started
+### Install
 
-```bash
-claude --plugin-dir /path/to/backlog
+```
+/plugin marketplace add backloghq/backlog
+/plugin install backlog@backloghq-backlog
 ```
 
 **[Documentation](https://backloghq.io)** &bull; **[GitHub](https://github.com/backloghq/backlog)**
