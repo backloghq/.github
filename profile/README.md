@@ -16,4 +16,4 @@
 claude --plugin-dir /path/to/backlog
 ```
 
-**[Documentation](https://backloghq.io)** &bull; **[GitHub](https://github.com/backloghq/backlog)** &bull; **[npm](https://www.npmjs.com/package/@backloghq/opslog)**
+**[Documentation](https://backloghq.io)** &bull; **[GitHub](https://github.com/backloghq/backlog)**
