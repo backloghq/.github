@@ -1,4 +1,6 @@
-## Open-source tools for AI agents
+# BacklogHQ
+
+Open-source tools that AI agents use as infrastructure. Pure TypeScript, zero native dependencies, MCP-first, event-driven, crash-safe by default.
 
 ### [AgentDB](https://github.com/backloghq/agentdb)
 
@@ -26,4 +28,27 @@ Persistent task management for Claude Code. Tasks survive sessions so work start
 /plugin marketplace add backloghq/backlog
 ```
 
-**[Documentation](https://backloghq.io)**
+### [opslog](https://github.com/backloghq/opslog)
+
+Embedded event-sourced document store. The engine under AgentDB.
+
+- **Append-only WAL** — every mutation recorded as an operation, state derived by replay
+- **Immutable snapshots** — fast cold-start without replaying the full log
+- **Multi-writer** — Lamport clocks for last-writer-wins across concurrent agents
+- **Tradeoff** — a crash can lose buffered ops (up to 100ms). Default `"immediate"` mode is safe.
+
+```bash
+npm install @backloghq/opslog
+```
+
+### [opslog-s3](https://github.com/backloghq/opslog-s3)
+
+S3 storage backend for opslog. Enables multi-writer concurrency across machines via Amazon S3.
+
+```bash
+npm install @backloghq/opslog-s3
+```
+
+---
+
+**[Documentation](https://backloghq.io)** &middot; **[GitHub](https://github.com/backloghq)**
