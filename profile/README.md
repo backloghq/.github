@@ -49,6 +49,28 @@ S3 storage backend for opslog. Enables multi-writer concurrency across machines 
 npm install @backloghq/opslog-s3
 ```
 
+### [termlog](https://github.com/backloghq/termlog)
+
+Log-structured full-text search index. Segment-based posting lists with LSM compaction, BM25 ranking, zero native dependencies.
+
+- **Size-tiered LSM compaction** — fanout-based merge; write amplification bounded at `O(N log_fanout N)`
+- **BM25 ranking** — configurable `k1`/`b`, top-k heap
+- **Streaming segment writes** — atomic commits via manifest swap; crash-safe orphan recovery
+- **Pluggable storage** — local FS by default, S3 via `@backloghq/termlog-s3`
+- **Scales** — 1M+ docs per index without per-file size cliffs
+
+```bash
+npm install @backloghq/termlog
+```
+
+### [termlog-s3](https://github.com/backloghq/termlog-s3)
+
+S3 storage backend for termlog. Streaming segment writes via S3 multipart upload; supports Amazon S3, MinIO, and LocalStack.
+
+```bash
+npm install @backloghq/termlog-s3
+```
+
 ---
 
 **[Documentation](https://backloghq.io)** &middot; **[GitHub](https://github.com/backloghq)**
